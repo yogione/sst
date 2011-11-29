@@ -12758,3 +12758,32 @@ Rendered menus/index.html.erb within layouts/application (149.2ms)
 Rendered devise/menu/_registration_items.html.erb (1.4ms)
 Rendered devise/menu/_login_items.html.erb (1.7ms)
 Completed 200 OK in 548ms (Views: 308.2ms | ActiveRecord: 34.0ms)
+  [1m[36m (265.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (148.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (36.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20111109022734)
+  [1m[35m (11.2ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (116.1ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (86.8ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111109022734')[0m
+Migrating to AddDeliveryLocationToUser (20111126035450)
+  [1m[35m (36.2ms)[0m  ALTER TABLE `users` ADD `delivery_location` varchar(255)
+  [1m[36m (79.2ms)[0m  [1mALTER TABLE `users` ADD `delivery_sub_location` varchar(255)[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111126035450')
+Migrating to DeviseCreateAdmins (20111126155545)
+  [1m[36m (48.8ms)[0m  [1mCREATE TABLE `admins` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(128) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (38.5ms)[0m  CREATE UNIQUE INDEX `index_admins_on_email` ON `admins` (`email`)
+  [1m[36m (38.5ms)[0m  [1mCREATE UNIQUE INDEX `index_admins_on_reset_password_token` ON `admins` (`reset_password_token`)[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111126155545')
+Migrating to AddAdminToUser (20111126163537)
+  [1m[36m (43.3ms)[0m  [1mALTER TABLE `users` ADD `admin` tinyint(1)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20111126163537')
+  [1m[36m (0.5ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 18:42:38 -0500
+
+ActionController::RoutingError (uninitialized constant MenusController):
+  
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (62.9ms)

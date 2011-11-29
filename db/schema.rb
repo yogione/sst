@@ -31,35 +31,6 @@ ActiveRecord::Schema.define(:version => 20111126163537) do
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
-  create_table "menus", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.string   "photo_file_name"
-    t.float    "price"
-    t.boolean  "available_today"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "orders", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "menu_id"
-    t.string   "delivery_location"
-    t.string   "delivery_sub_location"
-    t.datetime "delivery_time"
-    t.string   "status"
-    t.string   "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "confirmation_code"
-  end
-
-  create_table "sponsors", :force => true do |t|
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
