@@ -1,0 +1,15 @@
+<% if user_signed_in? %>
+  <li>
+  <%= current_user.email + " ~ "%>        
+  </li>
+   <li>
+  <%= current_user.delivery_sub_location %>        
+  </li>
+  <li>
+  <%= link_to('Logout', logout_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>

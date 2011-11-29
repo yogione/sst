@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  menu_id: 1
+  delivery_location: MyString
+  delivery_sub_location: MyString
+  delivery_time: 2011-11-19 20:35:28
+  status: MyString
+  comments: MyString
+
+two:
+  user_id: 1
+  menu_id: 1
+  delivery_location: MyString
+  delivery_sub_location: MyString
+  delivery_time: 2011-11-19 20:35:28
+  status: MyString
+  comments: MyString

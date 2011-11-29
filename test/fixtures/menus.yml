@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  photo_file_name: MyString
+  price: 1.5
+  available_today: false
+
+two:
+  title: MyString
+  description: MyString
+  photo_file_name: MyString
+  price: 1.5
+  available_today: false

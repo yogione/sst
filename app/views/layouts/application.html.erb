@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rl</title>
+  <%= stylesheet_link_tag 'application.css' %>
+  <%= stylesheet_link_tag 'bootstrap.css' %>
+  <%= javascript_include_tag 'application.js' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div class="topbar">
+    <div class="fill">
+        <div class="container">
+            <h3><a href="<%=root_path %>">roti lady</a></h3>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <% if current_user.try(:admin?) %>
+                <li><a href="<%= orders_path %>">Orders</a></li>
+                <% end %>
+                <li><a href="#">dummy2</a></li>
+                <li><a href="#">dummy3</a></li>
+          </ul>
+          <ul class="class=nav secondary-nav">
+  <%= render 'devise/menu/registration_items' %>
+  <%= render 'devise/menu/login_items' %>
+</ul>
+
+          </div>
+    </div>
+</div>
+<div class="container">
+<%= yield %>
+</div>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+<%= debug(params) if Rails.env.development? %>
+</body>
+</html>
