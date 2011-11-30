@@ -1,4 +1,8 @@
 Rl::Application.routes.draw do
+  resources :receivers
+
+  resources :messages
+
   devise_for :admins
 
   resources :sponsors
@@ -14,7 +18,7 @@ Rl::Application.routes.draw do
 end 
   resources :menus
 
-  root :to => "menus#index"
+  root :to => "messages#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

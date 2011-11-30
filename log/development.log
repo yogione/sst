@@ -12787,3 +12787,495 @@ ActionController::RoutingError (uninitialized constant MenusController):
   
 
 Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (62.9ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20111109022734)
+Migrating to AddDeliveryLocationToUser (20111126035450)
+Migrating to DeviseCreateAdmins (20111126155545)
+Migrating to AddAdminToUser (20111126163537)
+Migrating to CreateMessages (20111129235148)
+  [1m[35m (37.3ms)[0m  CREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message_text` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111129235148')[0m
+Migrating to CreateReceivers (20111129235327)
+  [1m[35m (2.8ms)[0m  CREATE TABLE `receivers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `phone` int(11), `timezone` varchar(255), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111129235327')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 18:55:08 -0500
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered messages/index.html.erb within layouts/application (44.6ms)
+  [1m[35mUser Load (20.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered devise/menu/_registration_items.html.erb (2.4ms)
+Rendered devise/menu/_login_items.html.erb (2.5ms)
+Completed 200 OK in 545ms (Views: 308.6ms | ActiveRecord: 26.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 20:49:34 -0500
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered messages/index.html.erb within layouts/application (63.3ms)
+Rendered devise/menu/_registration_items.html.erb (1.7ms)
+Rendered devise/menu/_login_items.html.erb (1.7ms)
+Completed 200 OK in 514ms (Views: 321.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2011-11-29 20:49:37 -0500
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.erb (14.6ms)
+Rendered messages/new.html.erb within layouts/application (17.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 57.2ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2011-11-29 20:49:53 -0500
+  Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTP6sD6t2XFAAP6Ux4GK1dKxHuRC5BtbqKNfFUCyi4c=", "message"=>{"message_text"=>"Please stop smoking daddy"}, "commit"=>"Create Message"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `messages` (`created_at`, `message_text`, `updated_at`) VALUES ('2011-11-30 01:49:53', 'Please stop smoking daddy', '2011-11-30 01:49:53')[0m
+  [1m[35m (6.8ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/messages/1
+Completed 302 Found in 116ms
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2011-11-29 20:49:53 -0500
+  Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.5ms)[0m  [1mSELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 1 LIMIT 1[0m
+Rendered messages/show.html.erb within layouts/application (8.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Completed 200 OK in 148ms (Views: 134.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2011-11-29 20:50:03 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.5ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (13.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Completed 200 OK in 60ms (Views: 51.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2011-11-29 20:51:16 -0500
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered messages/index.html.erb within layouts/application (12.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 129ms (Views: 121.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-11-29 20:51:29 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (4.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 85ms (Views: 31.8ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-11-29 20:51:41 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTP6sD6t2XFAAP6Ux4GK1dKxHuRC5BtbqKNfFUCyi4c=", "user"=>{"email"=>"lisa@aw.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'lisa@aw.com' LIMIT 1
+Completed   in 170ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTP6sD6t2XFAAP6Ux4GK1dKxHuRC5BtbqKNfFUCyi4c=", "user"=>{"email"=>"lisa@aw.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Rendered devise/shared/_links.erb (2.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 245ms (Views: 25.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-11-29 20:51:46 -0500
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (33.1ms)
+Rendered devise/menu/_registration_items.html.erb (76.2ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 151ms (Views: 126.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-11-29 20:53:18 -0500
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (33.1ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 75ms (Views: 48.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-11-29 20:53:32 -0500
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTP6sD6t2XFAAP6Ux4GK1dKxHuRC5BtbqKNfFUCyi4c=", "user"=>{"email"=>"lisa@aw.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  SELECT 1 FROM `users` WHERE `users`.`email` = BINARY 'lisa@aw.com' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `users` (`admin`, `created_at`, `current_sign_in_at`, `current_sign_in_ip`, `delivery_location`, `delivery_sub_location`, `email`, `encrypted_password`, `last_sign_in_at`, `last_sign_in_ip`, `remember_created_at`, `reset_password_sent_at`, `reset_password_token`, `sign_in_count`, `updated_at`) VALUES (NULL, '2011-11-30 01:53:32', NULL, NULL, NULL, NULL, 'lisa@aw.com', '$2a$10$SBcdv9I96g90wGOUHjju5.2LeQzuYAQiIWCT.8hO6fk9P/2eMc6du', NULL, NULL, NULL, NULL, NULL, 0, '2011-11-30 01:53:32')[0m
+  [1m[35m (14.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-11-30 01:53:32', `current_sign_in_at` = '2011-11-30 01:53:32', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-11-30 01:53:32' WHERE `users`.`id` = 1
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 673ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 20:53:33 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.2ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (67.7ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 159ms (Views: 146.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/messages/new" for 127.0.0.1 at 2011-11-29 20:54:43 -0500
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.erb (11.6ms)
+Rendered messages/new.html.erb within layouts/application (13.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 87ms (Views: 76.7ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2011-11-29 20:55:04 -0500
+  Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTP6sD6t2XFAAP6Ux4GK1dKxHuRC5BtbqKNfFUCyi4c=", "message"=>{"message_text"=>"Honey: my xmas gift - stop smoking"}, "commit"=>"Create Message"}
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `messages` (`created_at`, `message_text`, `updated_at`) VALUES ('2011-11-30 01:55:04', 'Honey: my xmas gift - stop smoking', '2011-11-30 01:55:04')
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/messages/2
+Completed 302 Found in 24ms
+
+
+Started GET "/messages/2" for 127.0.0.1 at 2011-11-29 20:55:04 -0500
+  Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` WHERE `messages`.`id` = 2 LIMIT 1
+Rendered messages/show.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 120ms (Views: 101.4ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 20:55:07 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.4ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 189ms (Views: 177.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 20:58:17 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 94ms (Views: 82.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2011-11-29 20:59:14 -0500
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 100ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 20:59:14 -0500
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered messages/index.html.erb within layouts/application (12.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 50.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-11-29 20:59:16 -0500
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Completed 200 OK in 82ms (Views: 28.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-11-29 20:59:33 -0500
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4FOxp6SNfUhZsdlDpXFrtSOqIxAG9er+KogztQi5Qk=", "user"=>{"email"=>"lisa@aw.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'lisa@aw.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-11-30 01:59:34', `sign_in_count` = 2, `updated_at` = '2011-11-30 01:59:34' WHERE `users`.`id` = 1
+  [1m[36m (4.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 371ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 20:59:34 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 74.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:01:42 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (2.0ms)
+Completed 200 OK in 168ms (Views: 85.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:18:53 -0500
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+ERROR: compiling _app_views_messages_index_html_erb___931732282_85002130 RAISED /home/srini/code/ruby/sst/app/views/messages/index.html.erb:38: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/srini/code/ruby/sst/app/views/messages/index.html.erb:40: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_messages_index_html_erb___931732282_85002130(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "messages/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Listing messages</h1>
+<div class="grid_12">
+  <h2>Send daily <strong>automatic</strong> text messages to help stop smoking</h2>
+  <h2 style="color: #ff0000">');@output_buffer.append= ( params['msg'] );@output_buffer.safe_concat('</h2>
+  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
+  ');@output_buffer.append=  form_for :receiver, :url => save_receiver_data_url do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.error_messages );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <p>
+      1.  Phone Number ');@output_buffer.append= (f.text_field :phone_number );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      and Name: ');@output_buffer.append= (f.text_field :name );@output_buffer.safe_concat('<br/>
+      2. Select Time Zone: ');@output_buffer.append= (time_zone_select( "receiver", "time_zone", ActiveSupport::TimeZone.us_zones, :default => "Pacific Time (US & Canada)") );@output_buffer.safe_concat(' <br/>
+      3. Choose messages and times
+    </p>
+  </div>
+
+<table class="zebra-striped">
+  <tr>
+    <th>Message text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+'); @messages.each do |message| 
+@output_buffer.safe_concat('  <tr>
+    <td>');@output_buffer.append= ( message.message_text );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to 'Show', message );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to 'Edit', edit_message_path(message) );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete );@output_buffer.safe_concat('</td>
+  </tr>
+'); end 
+@output_buffer.safe_concat('</table>
+
+<br />
+
+');@output_buffer.append= ( link_to 'New Message', new_message_path );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/home/srini/code/ruby/sst/app/controllers/messages_controller.rb:7:in `index'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__1047374273__process_action__67497216__callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered messages/index.html.erb within layouts/application (77.6ms)
+Completed 500 Internal Server Error in 351ms
+
+ActionView::Template::Error (/home/srini/code/ruby/sst/app/views/messages/index.html.erb:38: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/srini/code/ruby/sst/app/views/messages/index.html.erb:40: syntax error, unexpected $end, expecting keyword_end):
+    35: 
+    36: <%= link_to 'New Message', new_message_path %>
+  app/controllers/messages_controller.rb:7:in `index'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (106.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:21:39 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (197.7ms)
+Completed 500 Internal Server Error in 285ms
+
+ActionView::Template::Error (undefined local variable or method `save_receiver_data_url' for #<#<Class:0x90d8028>:0x8be0d90>):
+    3:   <h2>Send daily <strong>automatic</strong> text messages to help stop smoking</h2>
+    4:   <h2 style="color: #ff0000"><%= params['msg'] %></h2>
+    5:   <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
+    6:   <%= form_for :receiver, :url => save_receiver_data_url do |f| %>
+    7:   <%= f.error_messages %>
+    8:   <p>
+    9:       1.  Phone Number <%=f.text_field :phone_number %>
+  app/views/messages/index.html.erb:6:in `_app_views_messages_index_html_erb___931732282_83086300'
+  app/controllers/messages_controller.rb:7:in `index'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (57.3ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (62.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:29:03 -0500
+  Processing by MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered messages/index.html.erb within layouts/application (972.5ms)
+Completed 500 Internal Server Error in 1243ms
+
+ActionView::Template::Error (undefined method `error_messages' for #<ActionView::Helpers::FormBuilder:0xa034c4c>):
+    5:   <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
+    6:   <%#= form_for :receiver, :url => save_receiver_data_url do |f| %>
+    7:   <%= form_for :receiver,  do |f| %>
+    8:   <%= f.error_messages %>
+    9:   <p>
+    10:       1.  Phone Number <%=f.text_field :phone_number %>
+    11:       and Name: <%=f.text_field :name %><br/>
+  app/views/messages/index.html.erb:8:in `block in _app_views_messages_index_html_erb__788294549_84957620'
+  app/views/messages/index.html.erb:7:in `_app_views_messages_index_html_erb__788294549_84957620'
+  app/controllers/messages_controller.rb:7:in `index'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:29:23 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.5ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (1543.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.7ms)
+Completed 200 OK in 1705ms (Views: 1691.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:31:00 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.5ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (27.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (79.3ms)
+Completed 200 OK in 203ms (Views: 186.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-29 21:39:11 -0500
+  Processing by MessagesController#index as HTML
+  [1m[35mMessage Load (0.3ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered messages/index.html.erb within layouts/application (32.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 119ms (Views: 108.1ms | ActiveRecord: 4.8ms)
