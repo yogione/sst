@@ -1,0 +1,29 @@
+<h1>Listing receivers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Timezone</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receivers.each do |receiver| %>
+  <tr>
+    <td><%= receiver.name %></td>
+    <td><%= receiver.phone %></td>
+    <td><%= receiver.timezone %></td>
+    <td><%= receiver.user_id %></td>
+    <td><%= link_to 'Show', receiver %></td>
+    <td><%= link_to 'Edit', edit_receiver_path(receiver) %></td>
+    <td><%= link_to 'Destroy', receiver, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Receiver', new_receiver_path %>

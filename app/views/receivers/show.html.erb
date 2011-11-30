@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @receiver.name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @receiver.phone %>
+</p>
+
+<p>
+  <b>Timezone:</b>
+  <%= @receiver.timezone %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @receiver.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_receiver_path(@receiver) %> |
+<%= link_to 'Back', receivers_path %>
