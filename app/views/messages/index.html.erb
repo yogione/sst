@@ -1,16 +1,37 @@
 <div class="container">
-  <h2>Send daily <strong>automatic</strong> text messages to help stop smoking</h2>
+  <h2>Setup Once & Send daily <strong>automatic</strong> texts to help stop smoking</h2>
   <h2 style="color: #ff0000"><%= params['msg'] %></h2>
   <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
   <%#= form_for :receiver, :url => save_receiver_data_url do |f| %>
   <%= form_for :receiver,  do |f| %>
   <%#= f.error_messages %>
   <p>
-      1.  Phone Number <%=f.text_field :phone %>
-      and Name: <%=f.text_field :name %><br/>
-      2. Select Time Zone: <%=time_zone_select( "receiver", "timezone", ActiveSupport::TimeZone.us_zones, :default => "Pacific Time (US & Canada)") %> <br/>
-      3. Choose messages and times
-    </p>
+<table class="zebra-striped">
+    <tr> <td> 1.  Text Receipient Phone Number <%=f.text_field :phone %>
+      and Name: <%=f.text_field :name %> </td></tr>
+      <tr> <td> 2. Where is the recipient: <%#=time_zone_select( "receiver", "timezone", ActiveSupport::TimeZone.us_zones, :default => "Pacific Time (US & Canada)") %> <br/>
+      Pacific Time (CA) <%= check_box_tag 'timezone', :timezone %>
+      Arizona Time <%= check_box_tag 'timezone', :timezone %>
+      Mountain Time (CO) <%= check_box_tag 'timezone', :timezone %>
+      Central Time (IL)<%= check_box_tag 'timezone', :timezone %>
+      Eastern Time (NY)<%= check_box_tag 'timezone', :timezone %> </td></tr>
+       <tr> <td>3. When do you want the person to receive the text messages </br>
+       Morning (AM): 6:00 <%= check_box_tag 'texttime'%> 6:30 <%= check_box_tag 'texttime'%> 7:00 <%= check_box_tag 'texttime'%>
+    7:30 <%= check_box_tag 'texttime'%> 8:00 <%= check_box_tag 'texttime'%> 8:30 <%= check_box_tag 'texttime'%>
+     9:00 <%= check_box_tag 'texttime'%> 9:30 <%= check_box_tag 'texttime'%> 10:00 <%= check_box_tag 'texttime'%>
+    10:30 <%= check_box_tag 'texttime'%> 11:00 <%= check_box_tag 'texttime'%> 11:30 <%= check_box_tag 'texttime'%>
+    12:00 <%= check_box_tag 'texttime'%> </td></tr>
+    <tr> <td>  Afternoon (PM): 12:30 <%= check_box_tag 'texttime'%> 1:00 <%= check_box_tag 'texttime'%> 1:30 <%= check_box_tag 'texttime'%>
+    2:00 <%= check_box_tag 'texttime'%> 2:30 <%= check_box_tag 'texttime'%> 3:00 <%= check_box_tag 'texttime'%>
+     3:30 <%= check_box_tag 'texttime'%> 4:00 <%= check_box_tag 'texttime'%> 4:30 <%= check_box_tag 'texttime'%>
+    5:00 <%= check_box_tag 'texttime'%> 5:30 <%= check_box_tag 'texttime'%> 6:00 <%= check_box_tag 'texttime'%>
+    6:30 <%= check_box_tag 'texttime'%> </br> 7:00 <%= check_box_tag 'texttime'%>  7:30 <%= check_box_tag 'texttime'%>
+  8:00 <%= check_box_tag 'texttime'%>  8:30 <%= check_box_tag 'texttime'%>  9:00 <%= check_box_tag 'texttime'%>
+9:30 <%= check_box_tag 'texttime'%>  10:00 <%= check_box_tag 'texttime'%>  10:30 <%= check_box_tag 'texttime'%>
+11:00 <%= check_box_tag 'texttime'%>  11:30 <%= check_box_tag 'texttime'%>  12:00 <%= check_box_tag 'texttime'%></br>
+</td></tr>
+</table>  
+  </p>
     <% end %>
   </div>
 
@@ -24,10 +45,11 @@
 
 <% @messages.each do |message| %>
   <tr>
-    <td><%= message.message_text %></td>
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= check_box_tag 'messages[]', message.id %>
+    <%= message.message_text %></td>
+    <td><%#= link_to 'Show', message %></td>
+    <td><%#= link_to 'Edit', edit_message_path(message) %></td>
+    <td><%#= link_to 'Destroy', message, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
