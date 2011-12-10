@@ -7,14 +7,14 @@
   <%#= f.error_messages %>
   <p>
 <table class="zebra-striped">
-    <tr> <td> 1.  Text Receipient Phone Number <%=f.text_field :phone %>
+    <tr> <td> 1.  Text Recepient Phone Number <%=f.text_field :phone %>
       and Name: <%=f.text_field :name %> </td></tr>
       <tr> <td> 2. Where is the recipient: <%#=time_zone_select( "receiver", "timezone", ActiveSupport::TimeZone.us_zones, :default => "Pacific Time (US & Canada)") %> <br/>
-      Pacific Time (CA) <%= check_box_tag 'timezone', :timezone %>
-      Arizona Time <%= check_box_tag 'timezone', :timezone %>
-      Mountain Time (CO) <%= check_box_tag 'timezone', :timezone %>
-      Central Time (IL)<%= check_box_tag 'timezone', :timezone %>
-      Eastern Time (NY)<%= check_box_tag 'timezone', :timezone %> </td></tr>
+      Pacific Time (CA) <%= check_box_tag 'timezone', 'Pacific' %>
+      Arizona Time <%= check_box_tag 'Arizona', :timezone %>
+      Mountain Time (CO) <%= check_box_tag 'Mountain', :timezone %>
+      Central Time (IL)<%= check_box_tag 'Central', :timezone %>
+      Eastern Time (NY)<%= check_box_tag 'Eastern', :timezone %> </td></tr>
        <tr> <td>3. When do you want the person to receive the text messages </br>
        Morning (AM): 6:00 <%= check_box_tag 'texttime'%> 6:30 <%= check_box_tag 'texttime'%> 7:00 <%= check_box_tag 'texttime'%>
     7:30 <%= check_box_tag 'texttime'%> 8:00 <%= check_box_tag 'texttime'%> 8:30 <%= check_box_tag 'texttime'%>
@@ -53,7 +53,11 @@
   </tr>
 <% end %>
 </table>
-
+<% if user_signed_in? %>
+    <td> <%= button_to ' Order ', orders_path(user_id: current_user), :class=>"btn primary large" %> </td>
+    <% else %>
+         <td> <%= button_to ' Login to Try - 10 days free then 25 cents per day ', root_path, :class=>"btn primary large" %> </td>
+    <% end %>
 <br />
 
 <%= link_to 'New Message', new_message_path %>

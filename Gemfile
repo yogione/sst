@@ -5,6 +5,7 @@ gem 'devise', "1.4.8"
 #gem 'twitter-bootstrap-rails', :git => 'http://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails-bootstrap', '~>1.3.0'
+gem 'formtastic'
 
 
 
