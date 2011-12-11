@@ -3,11 +3,12 @@ class ReceiversController < ApplicationController
   # GET /receivers.json
   def index
     @receivers = Receiver.all
-
+   
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @receivers }
     end
+    
   end
 
   # GET /receivers/1

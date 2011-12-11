@@ -1,2 +1,4 @@
 *= require bootstrap.css
 @import bootstrap.css;
+*= require formtastic
+*= require my_formtastic_changes

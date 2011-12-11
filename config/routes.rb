@@ -18,7 +18,7 @@ Rl::Application.routes.draw do
 end 
   resources :menus
 
-  root :to => "messages#index"
+  root :to => "receivers#new"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

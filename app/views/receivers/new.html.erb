@@ -1,5 +1,16 @@
-<h1>New receiver</h1>
+<div class="container">
+  <h2>Setup Once & Send daily <strong>automatic</strong> texts to help stop smoking</h2>
+  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', receivers_path %>
+ 
+<%= semantic_form_for @receiver do |f| %>
+<%= f.inputs do %>
+    <%= f.inputs :name, :phone%>
+    <%= f.input :timezone, :as => :radio , 
+       :collection =>["pacific", "mountain", "central", "eastern"] %>
+  <%= f.input :messages, :as => :check_boxes, 
+       :collection => Message.find_by_sql(" select id, message_text from messages") %>
+  <% end %>  
+    <%= f.buttons %>
+  <% end %>
+</div>
