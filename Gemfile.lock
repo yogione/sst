@@ -47,8 +47,6 @@ GEM
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
     erubis (2.7.0)
-    formtastic (2.0.2)
-      rails (~> 3.0)
     highline (1.6.8)
     hike (1.2.1)
     i18n (0.6.0)
@@ -117,6 +115,9 @@ GEM
       ruby-debug-base19 (>= 0.11.19)
     ruby_core_source (0.1.5)
       archive-tar-minitar (>= 0.5.2)
+    simple_form (1.5.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -143,9 +144,9 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   devise (= 1.4.8)
-  formtastic
   less-rails-bootstrap (~> 1.3.0)
   mysql2 (< 0.3.7)
   rails (~> 3.1.0)
   ruby-debug19
+  simple_form
   twitter-bootstrap-rails

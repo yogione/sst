@@ -41,8 +41,9 @@ class ReceiversController < ApplicationController
   # POST /receivers
   # POST /receivers.json
   def create
+      
     @receiver = Receiver.new(params[:receiver])
-
+   
     respond_to do |format|
       if @receiver.save
         format.html { redirect_to @receiver, notice: 'Receiver was successfully created.' }
@@ -51,7 +52,29 @@ class ReceiversController < ApplicationController
         format.html { render action: "new" }
         format.json { render json: @receiver.errors, status: :unprocessable_entity }
       end
+      @receiver.reload
+    @rid = Receiver.last.id
+     # p "**********************************"
+   # p params
+   # p "receiver id: " + @rid.to_s
+    # p "message id: " + params[:message1][:id].to_s
+    # p "message id: " + params[:message2][:id].to_s
+    # p "**********************************"
+ @sql1 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message1][:id].to_s} )"  
+ @sql2 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message2][:id].to_s} )"  
+@sql3 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message3][:id].to_s} )"  
+@sql4 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message4][:id].to_s} )"  
+@sql5 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message5][:id].to_s} )"  
+@sql6 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message6][:id].to_s} )"  
+
+    ActiveRecord::Base.connection.execute(@sql1)
+    ActiveRecord::Base.connection.execute(@sql2)
+    ActiveRecord::Base.connection.execute(@sql3)
+    ActiveRecord::Base.connection.execute(@sql4)
+    ActiveRecord::Base.connection.execute(@sql5)
+    ActiveRecord::Base.connection.execute(@sql6)
     end
+    
   end
 
   # PUT /receivers/1
@@ -69,7 +92,8 @@ class ReceiversController < ApplicationController
       end
     end
   end
-
+  
+  
   # DELETE /receivers/1
   # DELETE /receivers/1.json
   def destroy

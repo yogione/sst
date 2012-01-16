@@ -1,16 +1,69 @@
-<div class="container">
   <h2>Setup Once & Send daily <strong>automatic</strong> texts to help stop smoking</h2>
   <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
+<div class="row">
+<div class="span16"> 
+<%= form_for(@receiver) do |f|  %>
+  <% if @receiver.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@receiver.errors.count, "error") %> prohibited this receiver from being saved:</h2>
 
- 
-<%= semantic_form_for @receiver do |f| %>
-<%= f.inputs do %>
-    <%= f.inputs :name, :phone%>
-    <%= f.input :timezone, :as => :radio , 
-       :collection =>["pacific", "mountain", "central", "eastern"] %>
-  <%= f.input :messages, :as => :check_boxes, 
-       :collection => Message.find_by_sql(" select id, message_text from messages") %>
-  <% end %>  
-    <%= f.buttons %>
+      <ul>
+      <% @receiver.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
+   
+  <table class="zebra-striped">
+    <tr><td>
+    <%= f.label :name %> 
+    <%= f.text_field :name, :placeholder => 'Mom or Dad or Jim or Dave' %></td> 
+  <td>
+    <%= f.label :phone %> 
+    <%= f.text_field :phone, :placeholder => '123-456-7890' %>
+  </td></tr>
+   <tr><td>
+    <%= f.label :timezone %> 
+    <%= f.radio_button :timezone, 'pacific' %>
+  <%= f.label :Pacific %>  </td>
+ <td><%= f.radio_button :timezone, 'mountain' %>
+  <%= f.label :Mountain %></td>
+ <td><%= f.label :Central %><%= f.radio_button :timezone, 'central' %>
+  </td>
+    <td><%= f.label :Eastern %><%= f.radio_button :timezone, 'eastern' %>
+  </td>
+</tr>
 </div>
+</table>    
+    
+    <%#= f.label :user_id %> 
+    <%#= f.number_field :user_id %>
+<div class="row">
+    <div class="span4">
+        <table class="zebra-striped">
+        <tr><td> <%= f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00"}) %></td></tr>
+        <tr><td> <%= f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00"}) %></td></tr>
+        <tr><td> <%= f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30"}) %></td></tr>
+        <tr><td> <%= f.select(:t4, Receiver::TIMES1, {:include_blank => false, :selected => "1:00"}) %></td></tr>
+        <tr><td> <%= f.select(:t5, Receiver::TIMES1, {:include_blank => false, :selected => "3:00"}) %></td></tr>
+        <tr><td> <%= f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30"}) %></td></tr>
+        </table>  
+    </div>   
+    <div class="span6">
+    <table class="zebra-striped">
+    <tr><td> <%=select('message1', "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "1"}, :class=>"span8") %></td></tr>
+    <tr><td> <%=select("message2", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false , :selected => "2"}, :class=>"span8") %></td></tr>
+<tr><td> <%=select("message3", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "3"}, :class=>"span8")%></td></tr>  
+<tr><td> <%=select("message4", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "4"}, :default =>"3" , :class=>"span8")%></td></tr>  
+<tr><td> <%=select("message5", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "5"}, :class=>"span8") %></td></tr>
+<tr><td> <%=select("message6", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "6"}, :class=>"span8") %></td></tr>
+     </table>  
+    </div>  
+</div> 
+    
+    
+
+
+<%= f.submit :class=>'btn primary large'%>
+<% end %>
