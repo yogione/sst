@@ -1,3 +1,22 @@
+1. add AM / PM to the text times
+
+3. make the phone number unique
+4. research good stop smoking slogans
+
+
+5. ability to type custom messages
+6. payment processing
+7. twilio
+8. logo
+9. UI
+
+
+
+
+
+2. only signed in user can create a receiver - done.
+
+
 git add 	Capfile
 git add 	app/assets/javascripts/orders.js
 git add 	app/assets/javascripts/sponsors.js

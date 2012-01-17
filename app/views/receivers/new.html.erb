@@ -18,7 +18,7 @@
   <table class="zebra-striped">
     <tr><td>
     <%= f.label :name %> 
-    <%= f.text_field :name, :placeholder => 'Mom or Dad or Jim or Dave' %></td> 
+    <%= f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' %></td> 
   <td>
     <%= f.label :phone %> 
     <%= f.text_field :phone, :placeholder => '123-456-7890' %>
@@ -61,9 +61,12 @@
      </table>  
     </div>  
 </div> 
-    
-    
+  
 
-
+<% if signed_in? %>
 <%= f.submit :class=>'btn primary large'%>
+<% else %>
+<%= f.submit 'please sign in to get started', :class=>'btn primary large span8'%>
+<% end %>
+
 <% end %>

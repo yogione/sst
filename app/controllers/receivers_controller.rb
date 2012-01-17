@@ -60,12 +60,12 @@ class ReceiversController < ApplicationController
     # p "message id: " + params[:message1][:id].to_s
     # p "message id: " + params[:message2][:id].to_s
     # p "**********************************"
- @sql1 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message1][:id].to_s} )"  
- @sql2 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message2][:id].to_s} )"  
-@sql3 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message3][:id].to_s} )"  
-@sql4 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message4][:id].to_s} )"  
-@sql5 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message5][:id].to_s} )"  
-@sql6 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message6][:id].to_s} )"  
+    @sql1 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message1][:id].to_s} )"  
+    @sql2 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message2][:id].to_s} )"  
+    @sql3 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message3][:id].to_s} )"  
+    @sql4 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message4][:id].to_s} )"  
+    @sql5 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message5][:id].to_s} )"  
+    @sql6 = "insert into messages_receivers values ( #{@rid.to_s} , #{params[:message6][:id].to_s} )"  
 
     ActiveRecord::Base.connection.execute(@sql1)
     ActiveRecord::Base.connection.execute(@sql2)
