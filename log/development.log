@@ -28980,3 +28980,1344 @@ Rendered receivers/new.html.erb within layouts/application (113.7ms)
 Rendered devise/menu/_registration_items.html.erb (0.8ms)
 Rendered devise/menu/_login_items.html.erb (0.8ms)
 Completed 200 OK in 249ms (Views: 125.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-17 19:47:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (8.9ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (519.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.6ms)
+Completed 200 OK in 1419ms (Views: 434.4ms | ActiveRecord: 913.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 18:27:51 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (11.2ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (384.8ms)
+Rendered devise/menu/_registration_items.html.erb (3.4ms)
+Rendered devise/menu/_login_items.html.erb (3.1ms)
+Completed 200 OK in 1579ms (Views: 745.1ms | ActiveRecord: 457.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 18:39:51 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (114.3ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.7ms)
+Completed 200 OK in 579ms (Views: 314.8ms | ActiveRecord: 49.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 18:45:58 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (173.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 201ms (Views: 184.9ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-18 18:46:17 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmAz2GXfq/tTImhnRACZamrNezrJMNa8gaq3Cuck1J0=", "receiver"=>{"name"=>"mom", "phone"=>"444", "timezone"=>"pacific", "t1"=>"6:00 AM", "t2"=>"6:00 AM", "t3"=>"6:00 AM", "t4"=>"6:00 AM", "t5"=>"6:00 AM", "t6"=>"6:00 AM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"please sign in to get started"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (26.2ms)[0m  INSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-18 23:46:17', 'mom', 444, '2000-01-01 06:00:00', '2000-01-01 06:00:00', '2000-01-01 06:00:00', '2000-01-01 06:00:00', '2000-01-01 06:00:00', '2000-01-01 06:00:00', 'pacific', '2012-01-18 23:46:17', NULL)
+  [1m[36m (43.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (1.6ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 48 LIMIT 1
+  [1m[36mReceiver Load (0.9ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (28.3ms)[0m  insert into messages_receivers values ( 48 , 1 )
+  [1m[36m (7.7ms)[0m  [1minsert into messages_receivers values ( 48 , 2 )[0m
+  [1m[35m (28.7ms)[0m  insert into messages_receivers values ( 48 , 3 )
+  [1m[36m (0.8ms)[0m  [1minsert into messages_receivers values ( 48 , 4 )[0m
+  [1m[35m (0.7ms)[0m  insert into messages_receivers values ( 48 , 5 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 48 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/48
+Completed 302 Found in 387ms
+
+
+Started GET "/receivers/48" for 127.0.0.1 at 2012-01-18 18:46:18 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[35mReceiver Load (0.6ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 48 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (41.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.9ms)
+Rendered devise/menu/_login_items.html.erb (1.7ms)
+Completed 200 OK in 157ms (Views: 126.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/receivers/48/edit" for 127.0.0.1 at 2012-01-18 18:48:04 -0500
+  Processing by ReceiversController#edit as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mReceiver Load (0.3ms)[0m  [1mSELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 48 LIMIT 1[0m
+Rendered receivers/_form.html.erb (25.0ms)
+Rendered receivers/edit.html.erb within layouts/application (28.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 203ms (Views: 183.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 18:48:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (119.8ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 166ms (Views: 139.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 18:49:20 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 136ms (Views: 117.6ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-18 18:53:52 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jmAz2GXfq/tTImhnRACZamrNezrJMNa8gaq3Cuck1J0=", "receiver"=>{"name"=>"hi", "phone"=>"888", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"please sign in to get started"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-18 23:53:52', 'hi', 888, '2000-01-01 07:00:00', '2000-01-01 09:00:00', '2000-01-01 11:30:00', '2000-01-01 13:00:00', '2000-01-01 15:00:00', '2000-01-01 17:30:00', 'pacific', '2012-01-18 23:53:52', NULL)[0m
+  [1m[35m (4.7ms)[0m  COMMIT
+  [1m[36mReceiver Load (0.5ms)[0m  [1mSELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 49 LIMIT 1[0m
+  [1m[35mReceiver Load (0.5ms)[0m  SELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1
+  [1m[36m (1.3ms)[0m  [1minsert into messages_receivers values ( 49 , 1 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 49 , 2 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 49 , 3 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 49 , 4 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 49 , 5 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 49 , 6 )
+Redirected to http://127.0.0.1:3000/receivers/49
+Completed 302 Found in 146ms
+
+
+Started GET "/receivers/49" for 127.0.0.1 at 2012-01-18 18:53:52 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mReceiver Load (0.6ms)[0m  [1mSELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 49 LIMIT 1[0m
+Rendered receivers/show.html.erb within layouts/application (39.6ms)
+Rendered devise/menu/_registration_items.html.erb (1.9ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 136ms (Views: 107.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:36:41 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (515.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.8ms)
+Rendered devise/menu/_login_items.html.erb (1.6ms)
+Completed 200 OK in 1213ms (Views: 467.2ms | ActiveRecord: 264.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:38:27 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (202.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 234ms (Views: 216.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:39:56 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (196.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 250ms (Views: 220.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:40:22 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (177.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 210ms (Views: 190.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:40:40 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (150.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.8ms)
+Rendered devise/menu/_login_items.html.erb (2.0ms)
+Completed 200 OK in 205ms (Views: 175.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:42:33 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (108.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Completed 200 OK in 141ms (Views: 122.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:42:34 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (214.8ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 264ms (Views: 233.6ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:42:35 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (189.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 231ms (Views: 205.5ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:42:35 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (176.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 225ms (Views: 192.6ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-18 21:42:35 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.9ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (109.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 144ms (Views: 123.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:00:57 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (2.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (425.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.8ms)
+Completed 200 OK in 601ms (Views: 314.4ms | ActiveRecord: 238.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:45:27 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (101.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 130ms (Views: 113.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:49:30 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (100.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 131ms (Views: 113.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:53:18 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (103.0ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 227ms (Views: 211.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:56:44 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (178.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 209ms (Views: 192.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:56:45 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (191.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Completed 200 OK in 223ms (Views: 205.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:56:46 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Completed 200 OK in 137ms (Views: 119.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 20:57:43 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 142ms (Views: 118.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:00:02 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (104.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 282ms (Views: 118.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:00:53 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (221.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 269ms (Views: 238.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:03:04 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (213.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 243ms (Views: 222.9ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:03:05 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (194.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Completed 200 OK in 242ms (Views: 216.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:03:53 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (113.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 163ms (Views: 136.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:05:13 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (117.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.5ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 156ms (Views: 137.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:05:31 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (211.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 257ms (Views: 230.1ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:05:58 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (176.8ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 210ms (Views: 191.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:08 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (215.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 264ms (Views: 233.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (176.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 214ms (Views: 188.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (104.8ms)
+Rendered devise/menu/_registration_items.html.erb (2.1ms)
+Rendered devise/menu/_login_items.html.erb (1.6ms)
+Completed 200 OK in 140ms (Views: 123.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:11 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (106.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 140ms (Views: 119.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:11 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (186.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 221ms (Views: 199.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:11 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (196.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 231ms (Views: 208.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:12 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (100.8ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 203ms (Views: 183.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:18 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (152.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Completed 200 OK in 214ms (Views: 172.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:20 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (106.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 232ms (Views: 119.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:10:21 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (182.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 230ms (Views: 201.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:07 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (209.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 261ms (Views: 233.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (101.8ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 137ms (Views: 114.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (101.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Completed 200 OK in 153ms (Views: 124.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (104.1ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 210ms (Views: 116.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:13 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (257.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.8ms)
+Completed 200 OK in 308ms (Views: 277.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:15 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (185.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Completed 200 OK in 230ms (Views: 201.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:16 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (103.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 133ms (Views: 117.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:24 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (96.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.4ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 130ms (Views: 113.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:25 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (108.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.3ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 225ms (Views: 193.9ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:26 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (215.7ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 261ms (Views: 226.5ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:27 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (197.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 239ms (Views: 212.1ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:29 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (119.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.3ms)
+Completed 200 OK in 170ms (Views: 141.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:11:31 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (102.3ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 133ms (Views: 114.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:12:20 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (178.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 224ms (Views: 196.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:12:30 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (186.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 233ms (Views: 206.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:12:31 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (182.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 224ms (Views: 196.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:12:32 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (110.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 161ms (Views: 132.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:12:33 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (118.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 152ms (Views: 132.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:12:33 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (175.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 207ms (Views: 187.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:16:14 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.9ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (244.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 295ms (Views: 266.4ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:17:01 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (182.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 197.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:17:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (158.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Completed 200 OK in 208ms (Views: 177.3ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:17:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (104.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Completed 200 OK in 136ms (Views: 117.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:17:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (210.7ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 257ms (Views: 229.0ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:17:11 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (196.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 243ms (Views: 214.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:17:29 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.3ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (222.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 270ms (Views: 238.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:19:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (134.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 184ms (Views: 153.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:20:58 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (107.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 139ms (Views: 121.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:22:12 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (130.5ms)
+Rendered devise/menu/_registration_items.html.erb (2.1ms)
+Rendered devise/menu/_login_items.html.erb (1.6ms)
+Completed 200 OK in 262ms (Views: 235.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:22:49 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (210.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 281ms (Views: 229.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:23:33 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (182.7ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 225ms (Views: 198.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:24:56 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.3ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (149.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 255ms (Views: 236.2ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:08 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (197.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 246ms (Views: 213.8ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 136ms (Views: 117.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (214.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 262ms (Views: 234.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:12 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (182.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 229ms (Views: 202.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:14 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (176.6ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 221ms (Views: 204.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:14 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (110.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 140ms (Views: 121.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:15 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (124.5ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Completed 200 OK in 246ms (Views: 139.4ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:15 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (192.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 233ms (Views: 208.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:24 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (206.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 259ms (Views: 229.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:28:27 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (102.1ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 141ms (Views: 116.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:29:55 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (159.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 207ms (Views: 175.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:29:56 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 228ms (Views: 118.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:29:56 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (210.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 246ms (Views: 225.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:29:57 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (173.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 206ms (Views: 186.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:30:53 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 144ms (Views: 119.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:30:55 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (104.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 137ms (Views: 119.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-19 21:30:56 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (104.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 215ms (Views: 195.8ms | ActiveRecord: 5.8ms)

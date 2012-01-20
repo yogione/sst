@@ -1,4 +1,4 @@
-  <h2>Setup Once & Send daily <strong>automatic</strong> texts to help stop smoking</h2>
+  <h2>Setup it up Once & Send daily <strong>automatic</strong> texts to </br>help your loved one stop smoking</h2>
   <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
 <div class="row">
 <div class="span16"> 
@@ -16,41 +16,40 @@
   <% end %>
    
   <table class="zebra-striped">
-    <tr><td>
-    <%= f.label :name %> 
+  <tr><td class="span6"><%= f.label :name %> </br>
     <%= f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' %></td> 
-  <td>
+  <td class="span6">
     <%= f.label :phone %> 
     <%= f.text_field :phone, :placeholder => '123-456-7890' %>
   </td></tr>
-   <tr><td>
-    <%= f.label :timezone %> 
-    <%= f.radio_button :timezone, 'pacific' %>
+   <tr><td class="span3">
+    <%= f.label :timezone %>  </td></tr>
+   <tr class="span8"><td class="span2">  <%= f.radio_button :timezone, 'pacific' %>
   <%= f.label :Pacific %>  </td>
- <td><%= f.radio_button :timezone, 'mountain' %>
+ <td class="span2"><%= f.radio_button :timezone, 'mountain' %>
   <%= f.label :Mountain %></td>
- <td><%= f.label :Central %><%= f.radio_button :timezone, 'central' %>
+ <td class="span2"><%= f.label :Central %><%= f.radio_button :timezone, 'central' %>
   </td>
-    <td><%= f.label :Eastern %><%= f.radio_button :timezone, 'eastern' %>
+    <td class="span2"><%= f.label :Eastern %><%= f.radio_button :timezone, 'eastern' %>
   </td>
 </tr>
+</table>   
 </div>
-</table>    
     
     <%#= f.label :user_id %> 
     <%#= f.number_field :user_id %>
 <div class="row">
-    <div class="span4">
+    <div class="span4 offset1">
         <table class="zebra-striped">
-        <tr><td> <%= f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00"}) %></td></tr>
-        <tr><td> <%= f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00"}) %></td></tr>
-        <tr><td> <%= f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30"}) %></td></tr>
-        <tr><td> <%= f.select(:t4, Receiver::TIMES1, {:include_blank => false, :selected => "1:00"}) %></td></tr>
-        <tr><td> <%= f.select(:t5, Receiver::TIMES1, {:include_blank => false, :selected => "3:00"}) %></td></tr>
-        <tr><td> <%= f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30"}) %></td></tr>
+        <tr><td> <%= f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00 AM"}) %></td></tr>
+        <tr><td> <%= f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00 AM"}) %></td></tr>
+        <tr><td> <%= f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30 AM"}) %></td></tr>
+        <tr><td> <%= f.select(:t4, Receiver::TIMES1, {:include_blank => false, :selected => "1:00 PM"}) %></td></tr>
+        <tr><td> <%= f.select(:t5, Receiver::TIMES1, {:include_blank => false, :selected => "3:00 PM"}) %></td></tr>
+        <tr><td> <%= f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30 PM"}) %></td></tr>
         </table>  
     </div>   
-    <div class="span6">
+    <div class="span8">
     <table class="zebra-striped">
     <tr><td> <%=select('message1', "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "1"}, :class=>"span8") %></td></tr>
     <tr><td> <%=select("message2", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false , :selected => "2"}, :class=>"span8") %></td></tr>
@@ -66,7 +65,8 @@
 <% if signed_in? %>
 <%= f.submit :class=>'btn primary large'%>
 <% else %>
-<%= f.submit 'please sign in to get started', :class=>'btn primary large span8'%>
+<%= f.submit 'please sign in to get started. first 10 days free. 25 cents per day afterwards.', :class=>'btn primary large span16'%>
 <% end %>
 
 <% end %>
+</div>
