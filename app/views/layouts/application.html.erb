@@ -8,11 +8,11 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div class="topbar">
-    <div class="fill">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
         <div class="container">
-            <h3><a href="<%=root_path %>">Stop Smoking Text</a></h3>
-            <ul>
+            <a class="brand" href="<%=root_path %>">Stop Smoking Text</a>
+            <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
                 <% if current_user.try(:admin?) %>
                 <li><a href="<%= orders_path %>">Orders</a></li>
@@ -20,7 +20,7 @@
                 <li><a href="#">dummy2</a></li>
                 <li><a href="#">dummy3</a></li>
           </ul>
-          <ul class="class=nav secondary-nav">
+          <ul class="class=navbar-inner pull-right">
   <%= render 'devise/menu/registration_items' %>
   <%= render 'devise/menu/login_items' %>
 </ul> </div>
