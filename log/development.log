@@ -31959,3 +31959,1026 @@ Rendered receivers/new.html.erb within layouts/application (106.8ms)
 Rendered devise/menu/_registration_items.html.erb (0.8ms)
 Rendered devise/menu/_login_items.html.erb (0.8ms)
 Completed 200 OK in 215ms (Views: 120.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:14:44 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (2.8ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (406.2ms)
+Rendered devise/menu/_registration_items.html.erb (3.3ms)
+Rendered devise/menu/_login_items.html.erb (3.6ms)
+Completed 200 OK in 2048ms (Views: 709.1ms | ActiveRecord: 985.5ms)
+  [1m[36m (137.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20111109022734)
+Migrating to AddDeliveryLocationToUser (20111126035450)
+Migrating to DeviseCreateAdmins (20111126155545)
+Migrating to AddAdminToUser (20111126163537)
+Migrating to CreateMessages (20111129235148)
+Migrating to CreateReceivers (20111129235327)
+Migrating to AddMessageTimeToMessages (20111211024945)
+Migrating to MessagesReceivers (20111211030301)
+Migrating to AddTimesToReceivers (20111211040900)
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:21:34 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"", "phone"=>"999", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+Completed 500 Internal Server Error in 223ms
+
+NoMethodError (undefined method `validate_presence_of' for #<Class:0x8d6961c>):
+  app/models/receiver.rb:3:in `<class:Receiver>'
+  app/models/receiver.rb:1:in `<top (required)>'
+  app/controllers/receivers_controller.rb:45:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:22:44 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (228.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.7ms)
+Rendered devise/menu/_login_items.html.erb (1.8ms)
+Completed 200 OK in 308ms (Views: 256.8ms | ActiveRecord: 25.1ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:22:52 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"", "phone"=>"777", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 71ms
+
+NoMethodError (undefined method `time_zone' for #<Receiver:0x90d565c>):
+  app/controllers/receivers_controller.rb:48:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:23:08 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (107.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 243ms (Views: 125.1ms | ActiveRecord: 16.9ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:23:13 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"", "phone"=>"777", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 404 Not Found in 150ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.6ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:24:07 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"3434", "phone"=>"777", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (82.7ms)[0m  INSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-28 19:24:07', '3434', 777, '2000-01-01 07:00:00', '2000-01-01 09:00:00', '2000-01-01 11:30:00', '2000-01-01 13:00:00', '2000-01-01 15:00:00', '2000-01-01 17:30:00', 'mountain', '2012-01-28 19:24:07', NULL)
+  [1m[36m (59.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (55.3ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 53 LIMIT 1
+  [1m[36mReceiver Load (1.0ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  insert into messages_receivers values ( 53 , 1 )
+  [1m[36m (0.7ms)[0m  [1minsert into messages_receivers values ( 53 , 2 )[0m
+  [1m[35m (0.7ms)[0m  insert into messages_receivers values ( 53 , 3 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 53 , 4 )[0m
+  [1m[35m (0.6ms)[0m  insert into messages_receivers values ( 53 , 5 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 53 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/53
+Completed 302 Found in 437ms
+
+
+Started GET "/receivers/53" for 127.0.0.1 at 2012-01-28 14:24:08 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"53"}
+  [1m[35mReceiver Load (0.3ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 53 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (27.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 205ms (Views: 184.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:24:20 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (128.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.4ms)
+Completed 200 OK in 183ms (Views: 139.1ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:24:34 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"", "phone"=>"", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 404 Not Found in 69ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:40:42 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (1.3ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (176.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 228ms (Views: 192.2ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:40:51 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"666", "phone"=>"6666", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: phone, timezone, t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 404 Not Found in 72ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:42:00 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"jim", "phone"=>"6666", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: phone, timezone, t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 404 Not Found in 49ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:42:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (175.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 226ms (Views: 192.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:42:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (131.1ms)
+Rendered devise/menu/_registration_items.html.erb (72.4ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 264ms (Views: 227.1ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:42:11 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (191.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 247ms (Views: 209.8ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:42:11 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (107.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 139ms (Views: 116.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 14:42:12 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (107.3ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 221ms (Views: 119.4ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 14:42:25 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"jim", "phone"=>"1234", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: phone, timezone, t1, t2, t3, t4, t5, t6
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 404 Not Found in 177ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 19:49:35 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (1.2ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (900.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (1.6ms)
+Completed 200 OK in 1166ms (Views: 1002.0ms | ActiveRecord: 76.9ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 19:49:51 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"mom", "phone"=>"123", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: phone, timezone, t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 404 Not Found in 91ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 20:01:03 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (180.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 213ms (Views: 193.4ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:01:17 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"jim", "phone"=>"333", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-29 01:01:18', 'jim', 333, '2000-01-01 07:00:00', '2000-01-01 09:00:00', '2000-01-01 11:30:00', '2000-01-01 13:00:00', '2000-01-01 15:00:00', '2000-01-01 17:30:00', 'pacific', '2012-01-29 01:01:18', NULL)
+  [1m[36m (92.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (0.9ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 54 LIMIT 1
+  [1m[36mReceiver Load (0.9ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  insert into messages_receivers values ( 54 , 1 )
+  [1m[36m (0.8ms)[0m  [1minsert into messages_receivers values ( 54 , 2 )[0m
+  [1m[35m (1.1ms)[0m  insert into messages_receivers values ( 54 , 3 )
+  [1m[36m (0.9ms)[0m  [1minsert into messages_receivers values ( 54 , 4 )[0m
+  [1m[35m (0.8ms)[0m  insert into messages_receivers values ( 54 , 5 )
+  [1m[36m (0.7ms)[0m  [1minsert into messages_receivers values ( 54 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/54
+Completed 302 Found in 198ms
+
+
+Started GET "/receivers/54" for 127.0.0.1 at 2012-01-28 20:01:18 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[35mReceiver Load (0.3ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 54 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (137.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 216ms (Views: 183.7ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:02:22 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"sai", "phone"=>"333", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-29 01:02:22', 'sai', 333, '2000-01-01 07:00:00', '2000-01-01 09:00:00', '2000-01-01 11:30:00', '2000-01-01 13:00:00', '2000-01-01 15:00:00', '2000-01-01 17:30:00', 'pacific', '2012-01-29 01:02:22', NULL)
+  [1m[36m (5.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (0.5ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 55 LIMIT 1
+  [1m[36mReceiver Load (0.6ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 55 , 1 )
+  [1m[36m (21.8ms)[0m  [1minsert into messages_receivers values ( 55 , 2 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 55 , 3 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 55 , 4 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 55 , 5 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 55 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/55
+Completed 302 Found in 116ms
+
+
+Started GET "/receivers/55" for 127.0.0.1 at 2012-01-28 20:02:22 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[35mReceiver Load (0.3ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 55 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (90.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 164ms (Views: 131.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 20:02:33 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (1.1ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (182.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 223ms (Views: 195.0ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:05:48 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"dave123", "phone"=>"113", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: timezone, t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 404 Not Found in 61ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:06:13 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"dave123", "phone"=>"113", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-29 01:06:13', 'dave123', 113, NULL, NULL, NULL, NULL, NULL, NULL, 'mountain', '2012-01-29 01:06:13', NULL)
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (0.9ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 56 LIMIT 1
+  [1m[36mReceiver Load (0.5ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (17.8ms)[0m  insert into messages_receivers values ( 56 , 1 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 56 , 2 )[0m
+  [1m[35m (0.7ms)[0m  insert into messages_receivers values ( 56 , 3 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 56 , 4 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 56 , 5 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 56 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/56
+Completed 302 Found in 193ms
+
+
+Started GET "/receivers/56" for 127.0.0.1 at 2012-01-28 20:06:13 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[35mReceiver Load (0.3ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 56 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (32.3ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 72.3ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:52:36 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"", "phone"=>"113", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 404 Not Found in 118ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:52:57 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"ddd", "phone"=>"113", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-29 01:52:57', 'ddd', 113, NULL, NULL, NULL, NULL, NULL, NULL, 'mountain', '2012-01-29 01:52:57', NULL)
+  [1m[36m (33.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (0.5ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 57 LIMIT 1
+  [1m[36mReceiver Load (0.5ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  insert into messages_receivers values ( 57 , 1 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 57 , 2 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 57 , 3 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 57 , 4 )[0m
+  [1m[35m (35.1ms)[0m  insert into messages_receivers values ( 57 , 5 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 57 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/57
+Completed 302 Found in 127ms
+
+
+Started GET "/receivers/57" for 127.0.0.1 at 2012-01-28 20:52:57 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[35mReceiver Load (1.9ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 57 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (95.0ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 159ms (Views: 134.4ms | ActiveRecord: 4.4ms)
+  [1m[36m (1.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20111109022734)
+Migrating to AddDeliveryLocationToUser (20111126035450)
+Migrating to DeviseCreateAdmins (20111126155545)
+Migrating to AddAdminToUser (20111126163537)
+Migrating to CreateMessages (20111129235148)
+Migrating to CreateReceivers (20111129235327)
+Migrating to AddMessageTimeToMessages (20111211024945)
+Migrating to MessagesReceivers (20111211030301)
+Migrating to AddTimesToReceivers (20111211040900)
+  [1m[35m (0.9ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 20:55:55 -0500
+  Processing by ReceiversController#new as HTML
+Completed 500 Internal Server Error in 186ms
+
+NoMethodError (undefined method `validates_uniquness_of' for #<Class:0x8505534>):
+  app/models/receiver.rb:7:in `<class:Receiver>'
+  app/models/receiver.rb:1:in `<top (required)>'
+  app/controllers/receivers_controller.rb:28:in `new'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 20:56:09 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+Rendered receivers/new.html.erb within layouts/application (129.7ms)
+Rendered devise/menu/_registration_items.html.erb (2.3ms)
+Rendered devise/menu/_login_items.html.erb (2.0ms)
+Completed 200 OK in 283ms (Views: 258.8ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:56:22 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"dave", "phone"=>"999", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: t1, t2, t3, t4, t5, t6
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (212.9ms)[0m  SELECT 1 FROM `receivers` WHERE `receivers`.`phone` = BINARY 999 LIMIT 1
+  [1m[36m (42.3ms)[0m  [1mROLLBACK[0m
+Completed 404 Not Found in 426ms
+
+ActiveRecord::RecordNotFound (Couldn't find Receiver without an ID):
+  app/controllers/receivers_controller.rb:55:in `block in create'
+  app/controllers/receivers_controller.rb:47:in `create'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-01-28 20:56:44 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jJMLAAwuHtgwXu1Ct3uMNoVPLqmhdD7dg6HSq3Begk=", "receiver"=>{"name"=>"dave", "phone"=>"999", "timezone"=>"pacific", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"sign in to get started. first 10 days free. 25 cents per day afterwards."}
+WARNING: Can't mass-assign protected attributes: t1, t2, t3, t4, t5, t6
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `receivers` (`created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES ('2012-01-29 01:56:45', 'dave', 999, NULL, NULL, NULL, NULL, NULL, NULL, 'pacific', '2012-01-29 01:56:45', NULL)[0m
+  [1m[35m (3.6ms)[0m  COMMIT
+  [1m[36mReceiver Load (0.6ms)[0m  [1mSELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 58 LIMIT 1[0m
+  [1m[35mReceiver Load (0.5ms)[0m  SELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1
+  [1m[36m (14.5ms)[0m  [1minsert into messages_receivers values ( 58 , 1 )[0m
+  [1m[35m (22.0ms)[0m  insert into messages_receivers values ( 58 , 2 )
+  [1m[36m (0.6ms)[0m  [1minsert into messages_receivers values ( 58 , 3 )[0m
+  [1m[35m (0.6ms)[0m  insert into messages_receivers values ( 58 , 4 )
+  [1m[36m (0.5ms)[0m  [1minsert into messages_receivers values ( 58 , 5 )[0m
+  [1m[35m (0.5ms)[0m  insert into messages_receivers values ( 58 , 6 )
+Redirected to http://127.0.0.1:3000/receivers/58
+Completed 302 Found in 258ms
+
+
+Started GET "/receivers/58" for 127.0.0.1 at 2012-01-28 20:56:45 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mReceiver Load (0.2ms)[0m  [1mSELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 58 LIMIT 1[0m
+Rendered receivers/show.html.erb within layouts/application (22.8ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 86ms (Views: 60.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 20:59:13 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (105.6ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 211ms (Views: 118.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:02:05 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (193.8ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 227ms (Views: 204.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:03:10 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (193.7ms)
+Rendered devise/menu/_registration_items.html.erb (1.0ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 227ms (Views: 205.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:03:29 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.8ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (186.0ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 220ms (Views: 198.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:06:15 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (210.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.6ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 247ms (Views: 227.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:06:46 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (181.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.5ms)
+Completed 200 OK in 219ms (Views: 199.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:07:49 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (119.2ms)
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Completed 200 OK in 157ms (Views: 135.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:08:31 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (112.2ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 146ms (Views: 123.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:09:12 -0500
+  Processing by ReceiversController#new as HTML
+ERROR: compiling _app_views_receivers_new_html_erb__612806098_87524670 RAISED /home/srini/code/ruby/sst/app/views/receivers/new.html.erb:32: syntax error, unexpected ',', expecting ')'
+...:timezone, 'Select Timezone', , :class => "label info" );@ou...
+...                               ^
+Function body:           def _app_views_receivers_new_html_erb__612806098_87524670(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "receivers/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="content">
+   <div class="page-header">
+    <h2>Setup it up Once & Send daily <strong>automatic</strong> texts to </br>help your loved one stop smoking</h2>
+  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4></br>
+   </div>
+<div class="row">
+<div class="span12"> 
+');@output_buffer.append=  form_for(@receiver) do |f|  @output_buffer.safe_concat('
+');   if @receiver.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@receiver.errors.count, "error") );@output_buffer.safe_concat(' prohibited this receiver from being saved:</h2>
+
+      <ul>
+');       @receiver.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('   
+  <table class="table-striped">
+  <tr><td>');@output_buffer.append= ( f.label :name, 'Enter Recipient Name:', :class => "label info" );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' );@output_buffer.safe_concat('</td> 
+  <td>
+    ');@output_buffer.append= ( f.label :phone, 'and Phone Number:' , :class => "label info" );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :phone, :placeholder => '123-456-7890' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+   <tr><td>
+    ');@output_buffer.append= ( f.label :timezone, 'Select Timezone', , :class => "label info" );@output_buffer.safe_concat('  </td></tr>
+   <tr ><td class="span2">  ');@output_buffer.append= ( f.radio_button :timezone, 'pacific' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.label :Pacific );@output_buffer.safe_concat('  </td>
+ <td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'mountain' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.label :Mountain );@output_buffer.safe_concat('</td>
+<td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'central' );@output_buffer.safe_concat(' ');@output_buffer.append= ( f.label :Central );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </td>
+  <td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'eastern' );@output_buffer.append= ( f.label :Eastern );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </td>
+</tr>
+</table>   
+</div>
+    
+');
+
+@output_buffer.safe_concat('<div class="row">
+    <div class="span3">
+        <table class="table-bordered">
+        <tr><td> ');@output_buffer.append= ( f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t4, Receiver::TIMES1, {:include_blank => false, :selected => "1:00 PM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t5, Receiver::TIMES1, {:include_blank => false, :selected => "3:00 PM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30 PM"}) );@output_buffer.safe_concat('</td></tr>
+        </table>  
+    </div>   
+    <div class="span4 offset4>
+    <table class="table-bordered">
+    <tr><td> ');@output_buffer.append= (select('message1', "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "1"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+    <tr><td> ');@output_buffer.append= (select("message2", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false , :selected => "2"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+<tr><td> ');@output_buffer.append= (select("message3", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "3"}, :class=>"span6"));@output_buffer.safe_concat('</td></tr>  
+<tr><td> ');@output_buffer.append= (select("message4", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "4"}, :default =>"3" , :class=>"span6"));@output_buffer.safe_concat('</td></tr>  
+<tr><td> ');@output_buffer.append= (select("message5", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "5"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+<tr><td> ');@output_buffer.append= (select("message6", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "6"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+     </table>  
+    </div>  
+</div> 
+  
+
+'); if signed_in? 
+@output_buffer.append= ( f.submit :class=>'btn primary large');@output_buffer.safe_concat('
+'); else 
+@output_buffer.append= ( f.submit 'sign in to get started. first 10 days free. 25 cents per day afterwards.', :class=>'btn primary large span12');@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('</div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/home/srini/code/ruby/sst/app/controllers/receivers_controller.rb:30:in `new'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__575235488__process_action__679731796__callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered receivers/new.html.erb within layouts/application (107.0ms)
+Completed 500 Internal Server Error in 135ms
+
+ActionView::Template::Error (/home/srini/code/ruby/sst/app/views/receivers/new.html.erb:32: syntax error, unexpected ',', expecting ')'
+...:timezone, 'Select Timezone', , :class => "label info" );@ou...
+...                               ^):
+    29: <td>&nbsp</td>
+    30: </tr>
+    31:    <tr><td>
+    32:     <%= f.label :timezone, 'Select Timezone', , :class => "label info" %>  </td></tr>
+    33:    <tr ><td class="span2">  <%= f.radio_button :timezone, 'pacific' %>
+    34:   <%= f.label :Pacific %>  </td>
+    35:  <td class="span2"><%= f.radio_button :timezone, 'mountain' %>
+  app/controllers/receivers_controller.rb:30:in `new'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:09:32 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (195.4ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 230ms (Views: 208.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:11:23 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (113.9ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 159ms (Views: 131.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:12:04 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (109.4ms)
+Rendered devise/menu/_registration_items.html.erb (1.1ms)
+Rendered devise/menu/_login_items.html.erb (1.1ms)
+Completed 200 OK in 144ms (Views: 124.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:15:34 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (110.1ms)
+Rendered devise/menu/_registration_items.html.erb (1.5ms)
+Rendered devise/menu/_login_items.html.erb (1.0ms)
+Completed 200 OK in 145ms (Views: 124.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:20:02 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (113.0ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 149ms (Views: 122.9ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:21:13 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (190.7ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 229ms (Views: 204.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:22:14 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.7ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (199.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.9ms)
+Completed 200 OK in 234ms (Views: 214.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-01-28 21:24:18 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+Rendered receivers/new.html.erb within layouts/application (185.7ms)
+Rendered devise/menu/_registration_items.html.erb (0.9ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 219ms (Views: 198.1ms | ActiveRecord: 4.7ms)

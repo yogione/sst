@@ -1,7 +1,7 @@
 <div class="content">
    <div class="page-header">
     <h2>Setup it up Once & Send daily <strong>automatic</strong> texts to </br>help your loved one stop smoking</h2>
-  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4>
+  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4></br>
    </div>
 <div class="row">
 <div class="span12"> 
@@ -18,18 +18,18 @@
     </div>
   <% end %>
    
-  <table class="table-bordered">
-  <tr><td><%= f.label :name %> 
+  <table class="table-striped">
+  <tr><td><%= f.label :name, 'Enter Recipient Name:', :class => "label info" %> 
     <%= f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' %></td> 
   <td>
-    <%= f.label :phone %> 
+    <%= f.label :phone, 'and Phone Number:' , :class => "label info" %> 
     <%= f.text_field :phone, :placeholder => '123-456-7890' %>
 </td>
 <td>&nbsp</td>
 <td>&nbsp</td>
 </tr>
    <tr><td>
-    <%= f.label :timezone %>  </td></tr>
+    <%= f.label :timezone, 'Select Timezone', :class => "label info" %>  </td></tr>
    <tr ><td class="span2">  <%= f.radio_button :timezone, 'pacific' %>
   <%= f.label :Pacific %>  </td>
  <td class="span2"><%= f.radio_button :timezone, 'mountain' %>
@@ -45,6 +45,7 @@
     <%#= f.label :user_id %> 
     <%#= f.number_field :user_id %>
 <div class="row">
+  <h2 class="label info span10"> Text Messages - When to send and what to say </h2>
     <div class="span3">
         <table class="table-bordered">
         <tr><td> <%= f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00 AM"}) %></td></tr>
@@ -71,7 +72,7 @@
 <% if signed_in? %>
 <%= f.submit :class=>'btn primary large'%>
 <% else %>
-<%= f.submit 'sign in to get started. first 10 days free. 25 cents per day afterwards.', :class=>'btn primary large span12'%>
+<%= f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10'%>
 <% end %>
 
 <% end %>
