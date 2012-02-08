@@ -1,6 +1,6 @@
 
 
-3. make the phone number unique
+
 4. research good stop smoking slogans
 5. facebook app
 
@@ -19,6 +19,7 @@
 
 2. only signed in user can create a receiver - done.
 1. add AM / PM to the text times - done
+3. make the phone number unique - done
 
 git add 	Capfile
 git add 	app/assets/javascripts/orders.js

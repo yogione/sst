@@ -48,11 +48,8 @@ class ReceiversController < ApplicationController
       if @receiver.save
         format.html { redirect_to @receiver, notice: 'Receiver was successfully created.' }
         format.json { render json: @receiver, status: :created, location: @receiver }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @receiver.errors, status: :unprocessable_entity }
-      end
-      @receiver.reload
+        
+    @receiver.reload
     @rid = Receiver.last.id
      # p "**********************************"
    # p params
@@ -73,6 +70,11 @@ class ReceiversController < ApplicationController
     ActiveRecord::Base.connection.execute(@sql4)
     ActiveRecord::Base.connection.execute(@sql5)
     ActiveRecord::Base.connection.execute(@sql6)
+    
+    else
+        format.html { render action: "new" }
+        format.json { render json: @receiver.errors, status: :unprocessable_entity }
+      end
     end
     
   end

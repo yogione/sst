@@ -4,7 +4,7 @@ class Receiver < ActiveRecord::Base
     validates_presence_of :phone
     validates_presence_of :timezone
     
-    #validates_uniqueness_of :phone
+    validates_uniqueness_of :phone
 
     attr_accessible :name, :phone, :timezone
     
