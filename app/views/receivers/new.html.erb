@@ -69,8 +69,9 @@
 </div> 
   
 
-<% if signed_in? %>
-<%= f.submit :class=>'btn primary large'%>
+<% if signed_in? %> </br>
+<%= f.check_box :accepted_tos %> I agree to the terms and conditions </br>
+<%= f.submit 'Create Recipient', :class=>'btn primary large'%>
 <% else %>
 <%= f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10'%>
 <% end %>

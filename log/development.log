@@ -33739,3 +33739,558 @@ Rendered receivers/new.html.erb within layouts/application (224.7ms)
 Rendered devise/menu/_registration_items.html.erb (0.8ms)
 Rendered devise/menu/_login_items.html.erb (0.8ms)
 Completed 200 OK in 270ms (Views: 240.7ms | ActiveRecord: 8.7ms)
+  [1m[36m (9.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20111109022734)
+Migrating to AddDeliveryLocationToUser (20111126035450)
+Migrating to DeviseCreateAdmins (20111126155545)
+Migrating to AddAdminToUser (20111126163537)
+Migrating to CreateMessages (20111129235148)
+Migrating to CreateReceivers (20111129235327)
+Migrating to AddMessageTimeToMessages (20111211024945)
+Migrating to MessagesReceivers (20111211030301)
+Migrating to AddTimesToReceivers (20111211040900)
+Migrating to AddAcceptedTosToReceivers (20120208234846)
+  [1m[35m (758.1ms)[0m  ALTER TABLE `receivers` ADD `accepted_tos` tinyint(1)
+  [1m[36m (11.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20120208234846')[0m
+  [1m[35m (0.5ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-08 18:49:57 -0500
+  Processing by ReceiversController#new as HTML
+ERROR: compiling _app_views_receivers_new_html_erb___786223080_85140590 RAISED /home/srini/code/ruby/sst/app/views/receivers/new.html.erb:73: syntax error, unexpected tSTRING_BEG, expecting ')'
+...= ( f.check_box :accepted_tos 'I here by accept the terms an...
+...                               ^
+/home/srini/code/ruby/sst/app/views/receivers/new.html.erb:74: syntax error, unexpected ':', expecting ')'
+... ( f.submit 'Create Recipient':class=>'btn primary large');@...
+...                               ^
+Function body:           def _app_views_receivers_new_html_erb___786223080_85140590(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "receivers/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="content">
+   <div class="page-header">
+    <h2>Setup it up Once & Send daily <strong>automatic</strong> texts to </br>help your loved one stop smoking</h2>
+  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4></br>
+   </div>
+<div class="row">
+<div class="span12"> 
+');@output_buffer.append=  form_for(@receiver) do |f|  @output_buffer.safe_concat('
+');   if @receiver.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@receiver.errors.count, "error") );@output_buffer.safe_concat(' prohibited this receiver from being saved:</h2>
+
+      <ul>
+');       @receiver.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('   
+  <table class="table-striped">
+  <tr><td>');@output_buffer.append= ( f.label :name, 'Enter Recipient Name:', :class => "label info" );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' );@output_buffer.safe_concat('</td> 
+  <td>
+    ');@output_buffer.append= ( f.label :phone, 'and Phone Number:' , :class => "label info" );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :phone, :placeholder => '123-456-7890' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+   <tr><td>
+    ');@output_buffer.append= ( f.label :timezone, 'Select Timezone', :class => "label info" );@output_buffer.safe_concat('  </td></tr>
+   <tr ><td class="span2">  ');@output_buffer.append= ( f.radio_button :timezone, 'pacific', :class=>'radio inline' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.label :Pacific );@output_buffer.safe_concat('  </td>
+ <td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'mountain' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.label :Mountain );@output_buffer.safe_concat('</td>
+<td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'central' );@output_buffer.safe_concat(' ');@output_buffer.append= ( f.label :Central );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </td>
+  <td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'eastern' );@output_buffer.append= ( f.label :Eastern );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </td>
+</tr>
+</table>   
+</div>
+    
+');
+
+@output_buffer.safe_concat('<div class="row">
+  <h2 class="label info span10"> Text Messages - When to send and what to say </h2>
+    <div class="span3">
+        <table class="table-bordered">
+        <tr><td> ');@output_buffer.append= ( f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t4, Receiver::TIMES1, {:include_blank => false, :selected => "1:00 PM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t5, Receiver::TIMES1, {:include_blank => false, :selected => "3:00 PM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30 PM"}) );@output_buffer.safe_concat('</td></tr>
+        </table>  
+    </div>   
+    <div class="span4 offset4>
+    <table class="table-bordered">
+    <tr><td> ');@output_buffer.append= (select('message1', "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "1"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+    <tr><td> ');@output_buffer.append= (select("message2", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false , :selected => "2"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+<tr><td> ');@output_buffer.append= (select("message3", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "3"}, :class=>"span6"));@output_buffer.safe_concat('</td></tr>  
+<tr><td> ');@output_buffer.append= (select("message4", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "4"}, :default =>"3" , :class=>"span6"));@output_buffer.safe_concat('</td></tr>  
+<tr><td> ');@output_buffer.append= (select("message5", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "5"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+<tr><td> ');@output_buffer.append= (select("message6", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "6"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+     </table>  
+    </div>  
+</div> 
+  
+
+'); if signed_in? 
+@output_buffer.append= ( f.check_box :accepted_tos 'I here by accept the terms and conditions');@output_buffer.safe_concat('
+');@output_buffer.append= ( f.submit 'Create Recipient':class=>'btn primary large');@output_buffer.safe_concat('
+'); else 
+@output_buffer.append= ( f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10');@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('</div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/home/srini/code/ruby/sst/app/controllers/receivers_controller.rb:30:in `new'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__132767571__process_action__21906243__callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered receivers/new.html.erb within layouts/application (92.2ms)
+Completed 500 Internal Server Error in 721ms
+
+ActionView::Template::Error (/home/srini/code/ruby/sst/app/views/receivers/new.html.erb:73: syntax error, unexpected tSTRING_BEG, expecting ')'
+...= ( f.check_box :accepted_tos 'I here by accept the terms an...
+...                               ^
+/home/srini/code/ruby/sst/app/views/receivers/new.html.erb:74: syntax error, unexpected ':', expecting ')'
+... ( f.submit 'Create Recipient':class=>'btn primary large');@...
+...                               ^):
+    70:   
+    71: 
+    72: <% if signed_in? %>
+    73: <%= f.check_box :accepted_tos 'I here by accept the terms and conditions'%>
+    74: <%= f.submit 'Create Recipient':class=>'btn primary large'%>
+    75: <% else %>
+    76: <%= f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10'%>
+  app/controllers/receivers_controller.rb:30:in `new'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (76.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-08 18:50:34 -0500
+  Processing by ReceiversController#new as HTML
+ERROR: compiling _app_views_receivers_new_html_erb___786223080_75382720 RAISED /home/srini/code/ruby/sst/app/views/receivers/new.html.erb:74: syntax error, unexpected ':', expecting ')'
+... ( f.submit 'Create Recipient':class=>'btn primary large');@...
+...                               ^
+Function body:           def _app_views_receivers_new_html_erb___786223080_75382720(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "receivers/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<div class="content">
+   <div class="page-header">
+    <h2>Setup it up Once & Send daily <strong>automatic</strong> texts to </br>help your loved one stop smoking</h2>
+  <h4><strong>One Time</strong> Setup is as easy as 1 - 2 - 3</h4></br>
+   </div>
+<div class="row">
+<div class="span12"> 
+');@output_buffer.append=  form_for(@receiver) do |f|  @output_buffer.safe_concat('
+');   if @receiver.errors.any? 
+@output_buffer.safe_concat('    <div id="error_explanation">
+      <h2>');@output_buffer.append= ( pluralize(@receiver.errors.count, "error") );@output_buffer.safe_concat(' prohibited this receiver from being saved:</h2>
+
+      <ul>
+');       @receiver.errors.full_messages.each do |msg| 
+@output_buffer.safe_concat('        <li>');@output_buffer.append= ( msg );@output_buffer.safe_concat('</li>
+');       end 
+@output_buffer.safe_concat('      </ul>
+    </div>
+');   end 
+@output_buffer.safe_concat('   
+  <table class="table-striped">
+  <tr><td>');@output_buffer.append= ( f.label :name, 'Enter Recipient Name:', :class => "label info" );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' );@output_buffer.safe_concat('</td> 
+  <td>
+    ');@output_buffer.append= ( f.label :phone, 'and Phone Number:' , :class => "label info" );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( f.text_field :phone, :placeholder => '123-456-7890' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</td>
+<td>&nbsp</td>
+<td>&nbsp</td>
+</tr>
+   <tr><td>
+    ');@output_buffer.append= ( f.label :timezone, 'Select Timezone', :class => "label info" );@output_buffer.safe_concat('  </td></tr>
+   <tr ><td class="span2">  ');@output_buffer.append= ( f.radio_button :timezone, 'pacific', :class=>'radio inline' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.label :Pacific );@output_buffer.safe_concat('  </td>
+ <td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'mountain' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( f.label :Mountain );@output_buffer.safe_concat('</td>
+<td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'central' );@output_buffer.safe_concat(' ');@output_buffer.append= ( f.label :Central );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </td>
+  <td class="span2">');@output_buffer.append= ( f.radio_button :timezone, 'eastern' );@output_buffer.append= ( f.label :Eastern );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </td>
+</tr>
+</table>   
+</div>
+    
+');
+
+@output_buffer.safe_concat('<div class="row">
+  <h2 class="label info span10"> Text Messages - When to send and what to say </h2>
+    <div class="span3">
+        <table class="table-bordered">
+        <tr><td> ');@output_buffer.append= ( f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30 AM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t4, Receiver::TIMES1, {:include_blank => false, :selected => "1:00 PM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t5, Receiver::TIMES1, {:include_blank => false, :selected => "3:00 PM"}) );@output_buffer.safe_concat('</td></tr>
+        <tr><td> ');@output_buffer.append= ( f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30 PM"}) );@output_buffer.safe_concat('</td></tr>
+        </table>  
+    </div>   
+    <div class="span4 offset4>
+    <table class="table-bordered">
+    <tr><td> ');@output_buffer.append= (select('message1', "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "1"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+    <tr><td> ');@output_buffer.append= (select("message2", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false , :selected => "2"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+<tr><td> ');@output_buffer.append= (select("message3", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "3"}, :class=>"span6"));@output_buffer.safe_concat('</td></tr>  
+<tr><td> ');@output_buffer.append= (select("message4", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "4"}, :default =>"3" , :class=>"span6"));@output_buffer.safe_concat('</td></tr>  
+<tr><td> ');@output_buffer.append= (select("message5", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "5"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+<tr><td> ');@output_buffer.append= (select("message6", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "6"}, :class=>"span6") );@output_buffer.safe_concat('</td></tr>
+     </table>  
+    </div>  
+</div> 
+  
+
+'); if signed_in? 
+@output_buffer.append= ( f.check_box :accepted_tos, 'I here by accept the terms and conditions');@output_buffer.safe_concat('
+');@output_buffer.append= ( f.submit 'Create Recipient':class=>'btn primary large');@output_buffer.safe_concat('
+'); else 
+@output_buffer.append= ( f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10');@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('
+'); end 
+@output_buffer.safe_concat('</div>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `module_eval'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:309:in `compile'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:217:in `compile!'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:170:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:55:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/template.rb:169:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:99:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:268:in `block in retrieve_response_from_mimes'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/mime_responds.rb:195:in `respond_to'
+/home/srini/code/ruby/sst/app/controllers/receivers_controller.rb:30:in `new'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:167:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:416:in `_run__132767571__process_action__21906243__callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `block in instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/notifications.rb:53:in `instrument'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/base.rb:121:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/abstract_controller/rendering.rb:45:in `process'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:193:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_controller/metal.rb:236:in `block in action'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/flash.rb:247:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/query_cache.rb:64:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activerecord-3.1.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/logger.rb:13:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/activesupport-3.1.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/static.rb:53:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/engine.rb:456:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/content_length.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/railties-3.1.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/srini/.rvm/gems/ruby-1.9.2-p0/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/home/srini/.rvm/rubies/ruby-1.9.2-p0/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered receivers/new.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (/home/srini/code/ruby/sst/app/views/receivers/new.html.erb:74: syntax error, unexpected ':', expecting ')'
+... ( f.submit 'Create Recipient':class=>'btn primary large');@...
+...                               ^):
+    71: 
+    72: <% if signed_in? %>
+    73: <%= f.check_box :accepted_tos, 'I here by accept the terms and conditions'%>
+    74: <%= f.submit 'Create Recipient':class=>'btn primary large'%>
+    75: <% else %>
+    76: <%= f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10'%>
+    77: <% end %>
+  app/controllers/receivers_controller.rb:30:in `new'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-08 18:51:04 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered receivers/new.html.erb within layouts/application (294.3ms)
+Completed 500 Internal Server Error in 419ms
+
+ActionView::Template::Error (undefined method `merge' for "I here by accept the terms and conditions":String):
+    70:   
+    71: 
+    72: <% if signed_in? %>
+    73: <%= f.check_box :accepted_tos, 'I here by accept the terms and conditions'%>
+    74: <%= f.submit 'Create Recipient', :class=>'btn primary large'%>
+    75: <% else %>
+    76: <%= f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10'%>
+  app/views/receivers/new.html.erb:73:in `block in _app_views_receivers_new_html_erb___786223080_87613180'
+  app/views/receivers/new.html.erb:8:in `_app_views_receivers_new_html_erb___786223080_87613180'
+  app/controllers/receivers_controller.rb:30:in `new'
+
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/srini/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.1.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-08 18:52:37 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (1.2ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered receivers/new.html.erb within layouts/application (223.4ms)
+Rendered devise/menu/_registration_items.html.erb (2.8ms)
+Rendered devise/menu/_login_items.html.erb (4.2ms)
+Completed 200 OK in 350ms (Views: 306.6ms | ActiveRecord: 27.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-08 18:52:58 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[36mMessage Load (0.6ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered receivers/new.html.erb within layouts/application (207.5ms)
+Rendered devise/menu/_registration_items.html.erb (0.8ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 243ms (Views: 216.4ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/receivers" for 127.0.0.1 at 2012-02-08 18:53:44 -0500
+  Processing by ReceiversController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/4eu7iolli6ayaFgUheoQTfG6EwSbXAJyYN5+MBk7S8=", "receiver"=>{"name"=>"dad", "phone"=>"78765", "timezone"=>"mountain", "t1"=>"7:00 AM", "t2"=>"9:00 AM", "t3"=>"11:30 AM", "t4"=>"1:00 PM", "t5"=>"3:00 PM", "t6"=>"5:30 PM", "accepted_tos"=>"1"}, "message1"=>{"id"=>"1"}, "message2"=>{"id"=>"2"}, "message3"=>{"id"=>"3"}, "message4"=>{"id"=>"4"}, "message5"=>{"id"=>"5"}, "message6"=>{"id"=>"6"}, "commit"=>"Create Recipient"}
+WARNING: Can't mass-assign protected attributes: t1, t2, t3, t4, t5, t6, accepted_tos
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (38.9ms)[0m  [1mSELECT 1 FROM `receivers` WHERE `receivers`.`phone` = BINARY 78765 LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `receivers` (`accepted_tos`, `created_at`, `name`, `phone`, `t1`, `t2`, `t3`, `t4`, `t5`, `t6`, `timezone`, `updated_at`, `user_id`) VALUES (NULL, '2012-02-08 23:53:45', 'dad', 78765, NULL, NULL, NULL, NULL, NULL, NULL, 'mountain', '2012-02-08 23:53:45', NULL)
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mReceiver Load (0.8ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 62 LIMIT 1
+  [1m[36mReceiver Load (0.8ms)[0m  [1mSELECT `receivers`.* FROM `receivers` ORDER BY `receivers`.`id` DESC LIMIT 1[0m
+  [1m[35m (15.6ms)[0m  insert into messages_receivers values ( 62 , 1 )
+  [1m[36m (0.7ms)[0m  [1minsert into messages_receivers values ( 62 , 2 )[0m
+  [1m[35m (0.7ms)[0m  insert into messages_receivers values ( 62 , 3 )
+  [1m[36m (0.7ms)[0m  [1minsert into messages_receivers values ( 62 , 4 )[0m
+  [1m[35m (27.6ms)[0m  insert into messages_receivers values ( 62 , 5 )
+  [1m[36m (0.7ms)[0m  [1minsert into messages_receivers values ( 62 , 6 )[0m
+Redirected to http://127.0.0.1:3000/receivers/62
+Completed 302 Found in 481ms
+
+
+Started GET "/receivers/62" for 127.0.0.1 at 2012-02-08 18:53:45 -0500
+  Processing by ReceiversController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[35mReceiver Load (0.3ms)[0m  SELECT `receivers`.* FROM `receivers` WHERE `receivers`.`id` = 62 LIMIT 1
+Rendered receivers/show.html.erb within layouts/application (24.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered devise/menu/_registration_items.html.erb (1.2ms)
+Rendered devise/menu/_login_items.html.erb (1.2ms)
+Completed 200 OK in 233ms (Views: 111.1ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-02-08 18:54:22 -0500
+  Processing by ReceiversController#new as HTML
+  [1m[35mMessage Load (0.6ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `messages`.* FROM `messages` 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `messages`.* FROM `messages` [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered receivers/new.html.erb within layouts/application (253.9ms)
+Rendered devise/menu/_registration_items.html.erb (0.7ms)
+Rendered devise/menu/_login_items.html.erb (0.8ms)
+Completed 200 OK in 308ms (Views: 270.4ms | ActiveRecord: 10.6ms)
