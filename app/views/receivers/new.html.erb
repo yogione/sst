@@ -18,7 +18,7 @@
     </div>
   <% end %>
    
-  <table class="table-striped">
+  <table class="table-striped table-condensed">
   <tr><td><%= f.label :name, 'Enter Recipient Name:', :class => "label info" %> 
     <%= f.text_field :name, :placeholder => 'Mom or Dad or Debbie or Dave' %></td> 
   <td>
@@ -45,9 +45,10 @@
     <%#= f.label :user_id %> 
     <%#= f.number_field :user_id %>
 <div class="row">
+  <div class="span12">
   <h2 class="label info span10"> Text Messages - When to send and what to say </h2>
     <div class="span3">
-        <table class="table-bordered">
+        <table class="table-striped table-condensed">
         <tr><td> <%= f.select(:t1, Receiver::TIMES1, {:include_blank => false, :selected => "7:00 AM"}) %></td></tr>
         <tr><td> <%= f.select(:t2, Receiver::TIMES1, {:include_blank => false, :selected => "9:00 AM"}) %></td></tr>
         <tr><td> <%= f.select(:t3, Receiver::TIMES1, {:include_blank => false, :selected => "11:30 AM"}) %></td></tr>
@@ -56,8 +57,8 @@
         <tr><td> <%= f.select(:t6, Receiver::TIMES1, {:include_blank => false, :selected => "5:30 PM"}) %></td></tr>
         </table>  
     </div>   
-    <div class="span4 offset4>
-    <table class="table-bordered">
+    <div class="span4">
+   <table class="table-striped table-condensed">
     <tr><td> <%=select('message1', "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "1"}, :class=>"span6") %></td></tr>
     <tr><td> <%=select("message2", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false , :selected => "2"}, :class=>"span6") %></td></tr>
 <tr><td> <%=select("message3", "id", Message.all.collect {|m| [ m.message_text, m.id ] }, {:include_blank => false, :selected => "3"}, :class=>"span6")%></td></tr>  
@@ -67,13 +68,14 @@
      </table>  
     </div>  
 </div> 
+</div>
   
 
 <% if signed_in? %> </br>
 <%= f.check_box :accepted_tos %> I agree to the terms and conditions </br>
 <%= f.submit 'Create Recipient', :class=>'btn primary large'%>
 <% else %>
-<%= f.submit 'sign in to get started. first 10 days free - no credit card. 25 cents per day afterwards.', :class=>'btn primary large span10'%>
+<%= link_to  "sign up to get started. first 10 days free - no credit card. 25 cents per day afterwards.", :new_user_registration, :class=>'btn primary large span10'%>
 <% end %>
 
 <% end %>
