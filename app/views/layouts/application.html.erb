@@ -12,14 +12,14 @@
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="<%=root_path %>">Stop Smoking Text</a>
+            <a class="brand" href="<%=root_path %>">S T O P   S M O K I N G   T E X T</a>
             <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#"></a></li>
                 <% if current_user.try(:admin?) %>
                 <li><a href="<%= orders_path %>">Orders</a></li>
                 <% end %>
-                <li><a href="#">dummy2</a></li>
-                <li><a href="#">dummy3</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
           </ul>
           <ul class="class=navbar nav navbar-text pull-right">
   <%= render 'devise/menu/registration_items' %>
@@ -27,6 +27,9 @@
 </ul> </div>
     </div>
 </div>
+	<div class="page-header">
+		<h4> -- </h4>
+	</div>
 <div class="container">
 <%= yield %>
 </div>

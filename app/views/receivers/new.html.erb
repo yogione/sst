@@ -72,11 +72,13 @@
   
 
 <% if signed_in? %> </br>
+    <div class="span12">
 <%= f.check_box :accepted_tos %> I agree to the terms and conditions </br>
 <%= f.submit 'Create Recipient', :class=>'btn primary large'%>
 <% else %>
 <%= link_to  "sign up to get started. first 10 days free - no credit card. 25 cents per day afterwards.", :new_user_registration, :class=>'btn primary large span10'%>
 <% end %>
+</div>
 
 <% end %>
 </div>
