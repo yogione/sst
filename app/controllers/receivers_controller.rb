@@ -46,7 +46,8 @@ class ReceiversController < ApplicationController
    
     respond_to do |format|
       if @receiver.save
-        format.html { redirect_to @receiver, notice: 'Receiver was successfully created.' }
+     #   format.html { redirect_to @receiver, notice: 'Receiver was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Receiver created. Please check your email to complete registration. Text messages will start soon. thanks' }
         format.json { render json: @receiver, status: :created, location: @receiver }
         
     @receiver.reload

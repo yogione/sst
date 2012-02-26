@@ -3,7 +3,7 @@ class Receiver < ActiveRecord::Base
     validates_presence_of :name
     validates_presence_of :phone
     validates_presence_of :timezone
-    validates_presence_of :accepted_tos
+    #validates_presence_of :accepted_tos
     
     validates_uniqueness_of :phone
 
