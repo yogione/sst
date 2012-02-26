@@ -8,7 +8,6 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-   <%= link_to image_tag("sst_logo.gif",:style =>"height:90px;width:100%;", :alt =>"stop smoking text"), root_path %>
   <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -26,10 +25,8 @@
   <%= render 'devise/menu/login_items' %>
 </ul> </div>
     </div>
+     <%= link_to image_tag("sst_logo.gif",:style =>"height:90px;width:100%;", :alt =>"stop smoking text"), root_path %>
 </div>
-	<div class="page-header">
-		<h4> -- </h4>
-	</div>
 <div class="container">
 <%= yield %>
 </div>
